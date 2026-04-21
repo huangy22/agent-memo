@@ -89,6 +89,7 @@ def test_codex_preset_installs_into_home_skills_dir(tmp_path: Path) -> None:
     assert install.returncode == 0, install.stderr
 
     assert (fake_home / ".codex" / "skills" / "memory-status" / "SKILL.md").exists()
+    assert (fake_home / ".codex" / "skills" / "memory-policy" / "SKILL.md").exists()
     assert (fake_home / ".codex" / "skills" / "bin" / "agent-memory-status").exists()
 
 
@@ -101,4 +102,5 @@ def test_claude_preset_installs_into_home_skills_dir(tmp_path: Path) -> None:
     assert install.returncode == 0, install.stderr
 
     assert (fake_home / ".claude" / "skills" / "memory-note" / "SKILL.md").exists()
+    assert (fake_home / ".claude" / "skills" / "memory-policy" / "SKILL.md").exists()
     assert (fake_home / ".claude" / "skills" / "bin" / "agent-memory-note").exists()

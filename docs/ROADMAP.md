@@ -10,6 +10,7 @@
 
 3. Validate real agent invocation
 - Verify `#memory-status`, `#memory-note`, `#memory-reflect`, and `#memory-distill` inside real Codex / Claude Code sessions, not only shell-driven wrapper tests.
+- Verify whether `#memory-policy` is enough to make memory usage predictable, or whether stronger host-side policy hooks are still needed.
 
 ## Next
 

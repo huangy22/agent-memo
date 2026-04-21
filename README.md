@@ -3,6 +3,7 @@
 这不是一个让最终用户手动执行 `run.sh` 的工具包。  
 它的目标形态是一组可安装到 agent 环境里的 skills：
 
+- `memory-policy`
 - `memory-note`
 - `memory-reflect`
 - `memory-distill`
@@ -14,6 +15,7 @@
 
 装好以后，正常使用方式应该是：
 
+- `#memory-policy`
 - `#memory-status`
 - `#memory-note`
 - `#memory-reflect`
@@ -38,6 +40,7 @@ bash install.sh --codex --execute
 
 安装完成后，你应该能在 skills 目录里看到：
 
+- `memory-policy/`
 - `memory-note/`
 - `memory-reflect/`
 - `memory-distill/`
@@ -91,7 +94,7 @@ bash install.sh --codex --execute
 用户只需要知道两件事：
 
 1. 这几个 skills 已经装进 agent 的 skill library
-2. 在对话里直接调用 `#memory-status`、`#memory-note`、`#memory-reflect`、`#memory-distill`
+2. 在对话里直接调用 `#memory-policy`、`#memory-status`、`#memory-note`、`#memory-reflect`、`#memory-distill`
 
 用户不需要手动运行这些内部文件：
 
@@ -110,6 +113,17 @@ bash install.sh --codex --execute
 - 项目级 memory 文件是否存在
 - short-term trace 是否存在
 - reflect / distill request bundle 是否存在
+
+### `memory-policy`
+
+作为上层策略 skill，决定什么时候该调用：
+
+- `memory-status`
+- `memory-note`
+- `memory-reflect`
+- `memory-distill`
+
+推荐在任务开始时和任务结束前使用，用来提醒 agent 检查是否需要记录或提升 memory。
 
 ### `memory-note`
 
@@ -156,6 +170,7 @@ bash install.sh --codex --execute
 
 ```bash
 rm -rf ~/.codex/skills/memory-note
+rm -rf ~/.codex/skills/memory-policy
 rm -rf ~/.codex/skills/memory-reflect
 rm -rf ~/.codex/skills/memory-distill
 rm -rf ~/.codex/skills/memory-status
