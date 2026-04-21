@@ -142,6 +142,12 @@ bash install.sh --codex --execute
 重新执行同样的安装命令到同一个 skills 目录即可。  
 如果后续要支持更平滑的覆盖升级，可以在安装脚本里补充 `--force` 或 upgrade 模式；当前版本默认更保守，避免无提示覆盖已有路径。
 
+更多规划和验收文档见：
+
+- `docs/EXECUTION_CHECKLIST.md`
+- `docs/CAPABILITY_CHECKLIST.md`
+- `docs/ROADMAP.md`
+
 ## 卸载
 
 如果要移除这套 skills，删除对应 skill 目录和内部 runtime 即可。
