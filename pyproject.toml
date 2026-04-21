@@ -1,0 +1,21 @@
+[project]
+name = "agent-memory-prototype"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = []
+
+[project.scripts]
+agent-memory-note = "memory.cli.entrypoints:note_main"
+agent-memory-reflect = "memory.cli.entrypoints:reflect_main"
+agent-memory-reflect-apply = "memory.cli.entrypoints:reflect_apply_main"
+agent-memory-distill = "memory.cli.entrypoints:distill_main"
+agent-memory-distill-apply = "memory.cli.entrypoints:distill_apply_main"
+agent-memory-status = "memory.cli.entrypoints:status_main"
+agent-memory-workflow = "memory.cli.entrypoints:workflow_main"
+
+[build-system]
+requires = ["setuptools>=69.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["memory*"]

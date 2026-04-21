@@ -1,0 +1,12 @@
+[project]
+name = "my-project"
+
+[instructions]
+repo_files = ["CLAUDE.md", "AGENTS.md"]
+user_file = "~/.claude/CLAUDE.md"
+
+[storage]
+short_term_dir = ".agent-memory/short-term"
+project_dir = ".agent-memory/project"
+candidates_dir = ".agent-memory/candidates"
+global_dir = "~/.codex/memories/global"
