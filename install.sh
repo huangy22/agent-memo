@@ -125,7 +125,7 @@ if [[ "$EXECUTE" -eq 1 ]]; then
   fi
 fi
 
-for skill in memory-note memory-reflect memory-distill memory-status; do
+for skill in memory-note memory-reflect memory-distill memory-status memory-policy; do
   src="$SKILLS_DIR/$skill"
   dest="$TARGET_DIR/$skill"
   echo "Install: $src -> $dest"
